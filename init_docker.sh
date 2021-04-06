@@ -6,12 +6,11 @@ sudo yum install -y docker
 sudo docker --version
 
 # Docker setup
-sudo systemctl start docker
-sudo systemctl enbale docker
+sudo service docker start
 
 sudo groupadd docker
-sudo gpasswd -a $USER docker
-sudo systemctl restart docker
+sudo usermod -a -G docker $USER
+sudo service docker restart
 
 
 ## Docker Compose install
