@@ -12,6 +12,7 @@ services:
       MYSQL_PASSWORD: wordpress
     ports:
       - "3306:3306"
+    resart: always
 
   wordpress:
     depends_on:
